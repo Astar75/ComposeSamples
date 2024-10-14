@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
@@ -34,7 +35,10 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun HelloWorld() {
-    Row {
+    Row(
+        verticalAlignment = Alignment.CenterVertically,
+        modifier = Modifier.fillMaxSize()
+    ) {
         Text(
             modifier = Modifier.background(color = Color.Yellow),
             text = "Привет мир",
@@ -44,9 +48,7 @@ fun HelloWorld() {
     }
 }
 
-@Preview(
-    showSystemUi = true
-)
+@Preview(showSystemUi = true)
 @Composable
 fun HelloWorldPreview() {
     ComposeSamplesTheme {
