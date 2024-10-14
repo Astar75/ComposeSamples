@@ -34,7 +34,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun HelloWorld() {
-    Row(modifier = Modifier.fillMaxSize()) {
+    Row {
         Text(
             modifier = Modifier.background(color = Color.Yellow),
             text = "Привет мир",
@@ -44,8 +44,9 @@ fun HelloWorld() {
     }
 }
 
-
-@Preview(showBackground = true)
+@Preview(
+    showSystemUi = true
+)
 @Composable
 fun HelloWorldPreview() {
     ComposeSamplesTheme {
