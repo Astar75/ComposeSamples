@@ -45,12 +45,23 @@ fun HelloWorld() {
         Text(
             modifier = Modifier
                 .background(color = Color.Yellow)
-                .align(BiasAlignment.Horizontal(.3f)),
+                .align(BiasAlignment.Horizontal(.3f))
+                .weight(2f),
             text = "Привет мир",
             fontSize = 18.sp
         )
-        Text(text = "Еще какой то текст", modifier = Modifier.align(Alignment.Start))
-        Text(text = "42", modifier = Modifier.align(Alignment.End))
+        Text(
+            text = "Еще какой то текст", modifier = Modifier
+                .align(Alignment.Start)
+                .background(Color.Green)
+                .weight(2f)
+        )
+        Text(
+            text = "42", modifier = Modifier
+                .align(Alignment.End)
+                .background(Color.Blue)
+                .weight(2f)
+        )
     }
 }
 
