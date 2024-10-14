@@ -38,17 +38,19 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun HelloWorld() {
     Column(
-        horizontalAlignment = BiasAlignment.Horizontal(0f),
+        horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.SpaceBetween,
         modifier = Modifier.fillMaxSize()
     ) {
         Text(
-            modifier = Modifier.background(color = Color.Yellow),
+            modifier = Modifier
+                .background(color = Color.Yellow)
+                .align(BiasAlignment.Horizontal(.3f)),
             text = "Привет мир",
             fontSize = 18.sp
         )
-        Text(text = "Еще какой то текст")
-        Text(text = "42")
+        Text(text = "Еще какой то текст", modifier = Modifier.align(Alignment.Start))
+        Text(text = "42", modifier = Modifier.align(Alignment.End))
     }
 }
 
